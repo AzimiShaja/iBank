@@ -1,26 +1,16 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import SBanking from "./components/SBanking";
-import Security from "./components/Security";
-import Feature from "./components/Feature";
-import Service from "./components/Service";
-import Mobile from "./components/Mobile";
-import Testimonial from "./components/Testimonial";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import { Route, Routes } from "react-router-dom";
+import IndexPage from "./Pages/IndexPage";
+import Register from "./Pages/Register";
+
 export default function App() {
   return (
     <>
-      <Header />
-      <Hero />
-      <SBanking />
-      <Feature />
-      <Security />
-      <Service />
-      <Mobile />
-      <Testimonial />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route>
+          <Route index element={<IndexPage />} />
+          <Route path="/register" element={<Register />} />
+        </Route>
+      </Routes>
     </>
   );
 }

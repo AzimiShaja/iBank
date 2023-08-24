@@ -3,10 +3,28 @@ import { ImLocation } from "react-icons/im";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GiTireIronCross } from "react-icons/gi";
 import { useState } from "react";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeNav, setActiveNav] = useState(0);
+  const [sticky, setSticky] = useState(false);
+
+  function handleNav() {
+    if (window.scrollY >= 50) {
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleNav);
+    return () => {
+      window.removeEventListener("scroll", handleNav);
+    };
+  });
   function handleToggle() {
     setIsOpen(!isOpen);
   }
@@ -29,16 +47,20 @@ export default function Header() {
         </div>
       </div>
       {/* =========Header========= */}
-      <header className="flex items-center justify-between py-4 px-5 lg:px-20 shadow-md border-b-4 border-orange-500 ">
-        <div>
+
+      <header
+        className={`flex ${
+          sticky ? "sticky bg-white duration-500 top-0 z-50" : ""
+        } items-center justify-between py-4 px-5 lg:px-20 shadow-md border-b-4 border-orange-500 `}
+      >
+        <Link to={"/"} className="cursor-pointer">
           <h1 className="text-3xl font-bold font-pacifico">
             <span className="text-orange-500 font-pacifico mr-1 text-4xl">
               i
             </span>
             Bank
           </h1>
-        </div>
-
+        </Link>
         <div className="flex gap-6 items-center max-lg:hidden">
           <ul className="flex gap-4 text-lg nav-links">
             <li
@@ -67,9 +89,11 @@ export default function Header() {
             </li>
             <li>login</li>
           </ul>
-          <button className="bg-blue-900 py-3 px-7 border border-blue-900 text-white rounded-lg hover:bg-white hover:text-black duration-300">
-            Register
-          </button>
+          <Link to={"/register"}>
+            <button className="bg-blue-900 py-3 px-7 border border-blue-900 text-white rounded-lg hover:bg-white hover:text-black duration-300">
+              Register
+            </button>
+          </Link>
         </div>
         {/* =========Hamburger Menu========= */}
         {isOpen ? (

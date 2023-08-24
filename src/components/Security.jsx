@@ -18,7 +18,7 @@ export default function Security() {
             data encryption you can ever imagine
           </p>
         </div>
-        <div className="flex flex-col items-center gap-5 mt-10">
+        <div className="flex flex-col items-start gap-5 mt-10">
           <div className="flex gap-3 items-center bg-gray-100 p-4 rounded-3xl">
             <FaLock className="text-3xl text-blue-900" />
             <p className="text-lg">Pay Online Securely</p>

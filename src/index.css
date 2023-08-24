@@ -9,11 +9,15 @@
   @apply cursor-pointer hover:border-b-2 hover:border-b-orange-500 duration-100;
 }
 .show_links {
-  @apply opacity-100 h-full w-full duration-700;
+  @apply opacity-100 duration-700;
 }
+
 .hide_links {
   @apply  opacity-0 h-0 w-0 hidden duration-700;
 }
 .footer-links li{
   @apply cursor-pointer hover:text-orange-500 duration-100;
+}
+.register input {
+  @apply border border-gray-300 rounded-md p-3 font-acme hover:border-blue-900 duration-100 hover:border outline-none;
 }
