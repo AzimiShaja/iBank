@@ -15,7 +15,7 @@ export default function Footer() {
             <h1 className="text-white  text-xl border-b-2 border-orange-500">
               Our Company
             </h1>
-            <ul className="text-white flex flex-col text-md gap-4">
+            <ul className="footer-links text-white flex flex-col text-md gap-4">
               <li>Company & team</li>
               <li>Our Services</li>
               <li>Contact Us</li>
@@ -26,7 +26,7 @@ export default function Footer() {
             <h1 className="text-white  text-xl border-b-2 border-orange-500">
               Products
             </h1>
-            <ul className="text-white flex flex-col text-md gap-4">
+            <ul className="text-white flex flex-col text-md gap-4 footer-links">
               <li>Online Payment</li>
               <li>Deposit Schema</li>
               <li>Online Shopping</li>
@@ -39,11 +39,16 @@ export default function Footer() {
             <h1 className="text-white  text-xl border-b-2 border-orange-500">
               Subscribe
             </h1>
-            <input
-              className="text-white outline-none mt-5 p-3 w-full rounded-lg bg-transparent border"
-              type="email"
-              placeholder="Your Email"
-            />
+            <div className="flex flex-col mt-4 gap-4 ">
+              <input
+                className="text-white outline-none mt-5 p-3 w-full rounded-lg bg-transparent border"
+                type="email"
+                placeholder="Your Email"
+              />
+              <button className="bg-orange-500 py-3 px-7 border border-orange-500 text-white rounded-lg hover:bg-transparent duration-300 cursor-pointer">
+                Subscribe
+              </button>
+            </div>
           </div>
         </div>
       </div>
