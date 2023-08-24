@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active-nav {
+  @apply text-orange-500 border-b-2  border-b-orange-500 duration-100;
+}
+.nav-links li {
+  @apply cursor-pointer hover:border-b-2 hover:border-b-orange-500 duration-100;
+}
+.show_links {
+  @apply opacity-100 h-full w-full duration-700;
+}
+.hide_links {
+  @apply  opacity-0 h-0 w-0 hidden duration-700;
+}
