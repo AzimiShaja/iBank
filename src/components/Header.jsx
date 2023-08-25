@@ -67,31 +67,47 @@ export default function Header() {
           </Link>
           <div className="flex gap-6 items-center max-lg:hidden">
             <ul className="flex gap-4 text-lg nav-links">
-              <li
-                className={` ${activeNav === 0 ? "active-nav" : ""}`}
-                onClick={() => setActiveNav(0)}
-              >
-                Home
-              </li>
-              <li
-                className={`${activeNav === 1 ? "active-nav" : ""} `}
-                onClick={() => setActiveNav(1)}
-              >
-                About us
-              </li>
-              <li
-                className={`${activeNav === 2 ? "active-nav" : ""}`}
-                onClick={() => setActiveNav(2)}
-              >
-                Service
-              </li>
-              <li
-                className={`${activeNav === 3 ? "active-nav" : ""}`}
-                onClick={() => setActiveNav(3)}
-              >
-                Contact
-              </li>
-              <li>login</li>
+              <Link to={"/"}>
+                <li
+                  className={` ${activeNav === 0 ? "active-nav" : ""}`}
+                  onClick={() => setActiveNav(0)}
+                >
+                  Home
+                </li>
+              </Link>
+              <Link to={"/about"}>
+                <li
+                  className={`${activeNav === 1 ? "active-nav" : ""} `}
+                  onClick={() => setActiveNav(1)}
+                >
+                  About us
+                </li>
+              </Link>
+              <Link to={"/services"}>
+                <li
+                  className={`${activeNav === 2 ? "active-nav" : ""}`}
+                  onClick={() => setActiveNav(2)}
+                >
+                  Service
+                </li>
+              </Link>
+              <Link to={"/contact"}>
+                <li
+                  className={`${activeNav === 3 ? "active-nav" : ""}`}
+                  onClick={() => setActiveNav(3)}
+                >
+                  Contact
+                </li>
+              </Link>
+              <Link to={"/login"}>
+                <li
+                  className={`${activeNav === 4 ? "active-nav" : ""}`}
+                  onClick={() => setActiveNav(4)}
+                >
+                  {" "}
+                  login
+                </li>
+              </Link>
             </ul>
             <Link to={"/register"}>
               <button className="bg-blue-900 py-3 px-7 border border-blue-900 text-white rounded-lg hover:bg-white hover:text-black duration-300">
@@ -120,35 +136,47 @@ export default function Header() {
           }`}
         >
           <ul className="flex flex-col items-center gap-4 text-lg nav-links">
-            <li
-              className={` ${activeNav === 0 ? "active-nav" : ""}`}
-              onClick={() => setActiveNav(0)}
-            >
-              Home
-            </li>
-            <li
-              className={`${activeNav === 1 ? "active-nav" : ""} `}
-              onClick={() => setActiveNav(1)}
-            >
-              About us
-            </li>
-            <li
-              className={`${activeNav === 2 ? "active-nav" : ""}`}
-              onClick={() => setActiveNav(2)}
-            >
-              Service
-            </li>
-            <li
-              className={`${activeNav === 3 ? "active-nav" : ""}`}
-              onClick={() => setActiveNav(3)}
-            >
-              Contact
-            </li>
-            <li>login</li>
+            <Link to={"/"}>
+              <li
+                className={` ${activeNav === 0 ? "active-nav" : ""}`}
+                onClick={() => setActiveNav(0)}
+              >
+                Home
+              </li>
+            </Link>
+            <Link to={"/about"}>
+              <li
+                className={`${activeNav === 1 ? "active-nav" : ""} `}
+                onClick={() => setActiveNav(1)}
+              >
+                About us
+              </li>
+            </Link>
+            <Link>
+              <li
+                className={`${activeNav === 2 ? "active-nav" : ""}`}
+                onClick={() => setActiveNav(2)}
+              >
+                Service
+              </li>
+            </Link>
+            <Link>
+              <li
+                className={`${activeNav === 3 ? "active-nav" : ""}`}
+                onClick={() => setActiveNav(3)}
+              >
+                Contact
+              </li>
+            </Link>
+            <Link to={"/login"}>
+              <li>login</li>
+            </Link>
           </ul>
-          <button className="bg-blue-900 py-3 px-7 text-white rounded-lg sm:w-6/12 w-full">
-            Register
-          </button>
+          <Link to={"/register"}>
+            <button className="bg-blue-900 py-3 px-7 border border-blue-900 text-white rounded-lg hover:bg-white hover:text-black duration-300">
+              Register
+            </button>
+          </Link>
         </div>
       </div>
     </>
