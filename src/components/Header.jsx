@@ -139,7 +139,7 @@ export default function Header(props) {
           <ul className="flex flex-col items-center gap-4 text-lg nav-links">
             <Link to={"/"}>
               <li
-                className={` ${activeNav === 0 ? "active-nav" : ""}`}
+                className={`${activeNav === 0 ? "active-nav" : ""}`}
                 onClick={() => setActiveNav(0)}
               >
                 Home
@@ -153,7 +153,7 @@ export default function Header(props) {
                 About us
               </li>
             </Link>
-            <Link>
+            <Link to={"/services"}>
               <li
                 className={`${activeNav === 2 ? "active-nav" : ""}`}
                 onClick={() => setActiveNav(2)}
@@ -161,16 +161,22 @@ export default function Header(props) {
                 Service
               </li>
             </Link>
-            <Link>
+            <Link to={"/contact"}>
               <li
-                className={`${activeNav === 3 ? "active-nav" : ""}`}
-                onClick={() => setActiveNav(3)}
+                className={`${
+                  activeNav === 3 ? "active-nav" : ""
+                } onClick={() => setActiveNav(3)`}
               >
                 Contact
               </li>
             </Link>
             <Link to={"/login"}>
-              <li>login</li>
+              <li
+                className={`${activeNav === 4 ? "active-nav" : ""}`}
+                onClick={() => setActiveNav(4)}
+              >
+                login
+              </li>
             </Link>
           </ul>
           <Link to={"/register"}>

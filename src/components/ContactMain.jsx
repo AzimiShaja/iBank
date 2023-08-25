@@ -1,14 +1,14 @@
 export default function ContactMain() {
   return (
     <>
-      <div className="py-20 bg-gray-50 flex flex-col items-center justify-center gap-10">
-        <div className="flex flex-col items-center">
+      <div className="py-20 bg-gray-50 flex flex-col items-center justify-center gap-10 px-10">
+        <div className="flex flex-col lg:items-center">
           <h1 className="text-orange-500">Send Us A Message</h1>
-          <h1 className="text-5xl font-open font-bold">
+          <h1 className=" text-3xl lg:text-5xl font-open font-bold">
             Do you have any question?
           </h1>
         </div>
-        <form className="flex flex-col gap-3 w-3/12">
+        <form className="flex flex-col gap-3 max-lg:w-full lg:w-3/12 ">
           <input type="text" placeholder="Full Name" />
           <input type="email" placeholder="Email" />
           <textarea rows="5" placeholder="Message"></textarea>
