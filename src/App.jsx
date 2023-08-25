@@ -15,6 +15,8 @@ const LazyIndexPage = lazyWithTimeout(() => import("./Pages/IndexPage"));
 const LazyRegister = lazyWithTimeout(() => import("./Pages/Register"));
 const LazyLoginPage = lazyWithTimeout(() => import("./Pages/LoginPage"));
 const LazyAbout = lazyWithTimeout(() => import("./Pages/About"));
+const LazyService = lazyWithTimeout(() => import("./Pages/ServicePage"));
+const LazyContactPage = lazyWithTimeout(() => import("./Pages/ContactPage"));
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -64,6 +66,8 @@ export default function App() {
             <Route path="register" element={<LazyRegister />} />
             <Route path="login" element={<LazyLoginPage />} />
             <Route path="about" element={<LazyAbout />} />
+            <Route path="services" element={<LazyService />} />
+            <Route path="contact" element={<LazyContactPage />} />
           </Route>
         </Routes>
       )}

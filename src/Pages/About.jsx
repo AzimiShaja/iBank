@@ -8,7 +8,7 @@ import Shopping from "../components/Shopping";
 export default function About() {
   return (
     <>
-      <Header />
+      <Header activeNav={1} />
       <AboutHero />
       <SBanking />
       <Service />

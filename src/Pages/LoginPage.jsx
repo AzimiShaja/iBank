@@ -6,7 +6,7 @@ import LoginHero from "../components/LoginHero";
 export default function LoginPage() {
   return (
     <>
-      <Header />
+      <Header activeNav={4} />
       <LoginHero />
       <LoginForm />
       <Footer />

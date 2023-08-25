@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 export default function IndexPage() {
   return (
     <>
-      <Header />
+      <Header activeNav={0} />
       <Hero />
       <SBanking />
       <Feature />

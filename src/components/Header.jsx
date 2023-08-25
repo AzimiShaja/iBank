@@ -6,9 +6,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header(props) {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeNav, setActiveNav] = useState(0);
+  const [activeNav, setActiveNav] = useState(props.activeNav);
   const [sticky, setSticky] = useState(false);
 
   function handleNav() {
@@ -69,7 +69,7 @@ export default function Header() {
             <ul className="flex gap-4 text-lg nav-links">
               <Link to={"/"}>
                 <li
-                  className={` ${activeNav === 0 ? "active-nav" : ""}`}
+                  className={`${activeNav === 0 ? "active-nav" : ""}`}
                   onClick={() => setActiveNav(0)}
                 >
                   Home
@@ -93,8 +93,9 @@ export default function Header() {
               </Link>
               <Link to={"/contact"}>
                 <li
-                  className={`${activeNav === 3 ? "active-nav" : ""}`}
-                  onClick={() => setActiveNav(3)}
+                  className={`${
+                    activeNav === 3 ? "active-nav" : ""
+                  } onClick={() => setActiveNav(3)`}
                 >
                   Contact
                 </li>
