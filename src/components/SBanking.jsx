@@ -1,4 +1,5 @@
 import { BsCheck2Circle } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import img from "/src/assets/about_img.png";
 export default function SBanking() {
   return (
@@ -38,9 +39,11 @@ export default function SBanking() {
           </p>
         </div>
         <div>
-          <button className="bg-blue-900 py-3 px-7 border border-blue-900 text-white rounded-lg hover:bg-white hover:text-black duration-300 cursor-pointer">
-            More About Us
-          </button>
+          <Link to={"/about"}>
+            <button className="bg-blue-900 py-3 px-7 border border-blue-900 text-white rounded-lg hover:bg-white hover:text-black duration-300 cursor-pointer">
+              More About Us
+            </button>
+          </Link>
         </div>
       </div>
     </div>

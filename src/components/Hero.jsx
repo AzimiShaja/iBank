@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import img from "/src/assets/img.png";
 export default function Hero() {
   return (
@@ -11,9 +12,11 @@ export default function Hero() {
             Fast & Secure Online Money Transfer
           </h1>
         </div>
-        <button className="bg-orange-500 py-3 px-7 border border-orange-500 text-white rounded-lg hover:bg-white hover:text-black duration-300 cursor-pointer">
-          Get Started
-        </button>
+        <Link to="/register">
+          <button className="bg-orange-500 py-3 px-7 border border-orange-500 text-white rounded-lg hover:bg-white hover:text-black duration-300 cursor-pointer">
+            Get Started
+          </button>
+        </Link>
       </div>
       <div className="flex items-end pt-10 px-4 lg:px-20">
         <img src={img} />
