@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 export default function RegisterForm() {
   return (
     <div className="py-20 flex flex-col justify-center items-center gap-10">
       <h1 className="text-4xl font-bold font-open">Register</h1>
-      <form className="register flex flex-col gap-4 lg:w-3/12 max-lg:w-8/12">
-        <div className="flex gap-4 md:gap-5 justify-between max-md:flex-col w-full">
+      <form className="register flex flex-col gap-4 lg:w-5/12 max-lg:w-8/12">
+        <div className="flex max-lg:gap-5 gap-4 justify-between max-md:flex-col">
           <input type="text" placeholder="Enter your first name" required />
           <input type="text" placeholder="Enter your Last name" required />
         </div>
@@ -15,6 +17,14 @@ export default function RegisterForm() {
           Sign up
         </button>
       </form>
+      <div>
+        <p>
+          Already have an account?{" "}
+          <Link to={"/login"} className="underline text-blue-900">
+            Login
+          </Link>{" "}
+        </p>
+      </div>
     </div>
   );
 }

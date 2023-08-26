@@ -19,7 +19,7 @@
   @apply cursor-pointer hover:text-orange-500 duration-100;
 }
  input {
-  @apply border border-gray-300 rounded-md p-3 font-acme hover:border-blue-900 duration-100 hover:border outline-none;
+  @apply border border-gray-300 w-full rounded-md p-3 font-acme hover:border-blue-900 duration-100 hover:border outline-none;
 }
 textarea {
   @apply border border-gray-300 rounded-md p-3 font-acme hover:border-blue-900 duration-100 hover:border outline-none;
