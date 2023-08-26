@@ -8,9 +8,17 @@ import Mobile from "../components/Mobile";
 import Testimonial from "../components/Testimonial";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import { useState, useEffect } from "react";
 export default function IndexPage() {
+  const [contentLoaded, setContentLoaded] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setContentLoaded(true);
+    }, 300);
+  });
+
   return (
-    <>
+    <div className={`${contentLoaded ? "translate" : "not-translate"}`}>
       <Header activeNav={0} />
       <Hero />
       <SBanking />
@@ -21,6 +29,6 @@ export default function IndexPage() {
       <Testimonial />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }

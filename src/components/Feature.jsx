@@ -12,7 +12,7 @@ export default function Feature() {
       </div>
 
       <div className="grid max-lg:grid-cols-1 grid-cols-3  gap-4 w-full lg:px-60">
-        <div className="bg-white p-4 rounded-md shadow-2xl flex flex-col gap-4">
+        <div className="bg-white p-4 rounded-md shadow-2xl flex flex-col gap-4 hover:scale-110 duration-300">
           <h1 className="flex gap-2 items-center text-2xl font-poppins">
             <BsShieldLock className="text-2xl text-orange-500" /> Protect your
             Account
@@ -22,7 +22,7 @@ export default function Feature() {
             share your account with anyone
           </p>
         </div>
-        <div className="bg-white p-4 rounded-md shadow-2xl flex flex-col gap-4">
+        <div className="bg-white p-4 rounded-md shadow-2xl flex flex-col gap-4 hover:scale-110 duration-300">
           <h1 className="flex gap-2 items-center text-2xl font-poppins ">
             <GiReceiveMoney className="text-3xl text-orange-500" />
             Send Money
@@ -32,7 +32,7 @@ export default function Feature() {
             data encryption you can ever imagine
           </p>
         </div>
-        <div className="bg-white p-4 rounded-md shadow-2xl flex flex-col gap-4">
+        <div className="bg-white p-4 rounded-md shadow-2xl flex flex-col gap-4 hover:scale-110 duration-300">
           <h1 className="flex gap-2 items-center text-2xl font-open ">
             <AiFillBank className="text-2xl text-orange-500" /> Online Banking
           </h1>

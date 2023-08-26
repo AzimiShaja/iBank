@@ -2,6 +2,7 @@ import { FcAlarmClock } from "react-icons/fc";
 import { PiListDashes } from "react-icons/pi";
 import { AiFillSetting } from "react-icons/ai";
 import { TbDragDrop } from "react-icons/tb";
+import { Link } from "react-router-dom";
 export default function Service() {
   return (
     <div className="bg-gray-50 flex max-lg:flex-col justify-center mt-20 gap-20 items-start max-lg:px-10 py-20 px-5">
@@ -41,9 +42,11 @@ export default function Service() {
           </p>
         </div>
         <div>
-          <button className="bg-blue-900 border border-blue-900  text-white px-4 py-3 rounded-md hover:bg-transparent hover:text-blue-900 duration-300">
-            View All Services
-          </button>
+          <Link to={"/services"}>
+            <button className="bg-blue-900 border border-blue-900  text-white px-4 py-3 rounded-md hover:bg-transparent hover:text-blue-900 duration-300">
+              View All Services
+            </button>
+          </Link>
         </div>
       </div>
     </div>

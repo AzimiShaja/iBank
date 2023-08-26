@@ -24,3 +24,9 @@
 textarea {
   @apply border border-gray-300 rounded-md p-3 font-acme hover:border-blue-900 duration-100 hover:border outline-none;
 }
+.translate {
+  @apply opacity-100 duration-700 ;
+}
+.not-translate{
+  @apply opacity-0  duration-700;
+}

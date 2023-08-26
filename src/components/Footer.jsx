@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <>
@@ -45,9 +47,11 @@ export default function Footer() {
                 type="email"
                 placeholder="Your Email"
               />
-              <button className="bg-orange-500 py-3 px-7 border border-orange-500 text-white rounded-lg hover:bg-transparent duration-300 cursor-pointer">
-                Subscribe
-              </button>
+              <Link to={"/register"}>
+                <button className="bg-orange-500 py-3 px-7 border border-orange-500 text-white rounded-lg hover:bg-transparent duration-300 cursor-pointer">
+                  Subscribe
+                </button>
+              </Link>
             </div>
           </div>
         </div>
