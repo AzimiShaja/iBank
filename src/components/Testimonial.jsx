@@ -22,9 +22,7 @@ export default function Testimonial() {
                   src={testimonial.img}
                   alt=""
                 />
-                <BiSolidQuoteRight className="text-4xl text-orange-500" />
               </div>
-
               <div className="flex flex-col gap-2 ">
                 <p className="text-md font-light text-gray-500">
                   {testimonial.review}
