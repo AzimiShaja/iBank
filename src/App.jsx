@@ -19,18 +19,6 @@ const LazyService = lazyWithTimeout(() => import("./Pages/ServicePage"));
 const LazyContactPage = lazyWithTimeout(() => import("./Pages/ContactPage"));
 
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const loadingTimer = setTimeout(() => {
-      setIsLoading(false);
-    }, 600);
-
-    return () => {
-      clearTimeout(loadingTimer);
-    };
-  }, []);
-
   return (
     <Suspense
       fallback={
@@ -47,19 +35,7 @@ export default function App() {
         </div>
       }
     >
-      {isLoading ? (
-        <div className="h-screen bg-gray-100 flex justify-center items-center flex-col gap-5">
-          <Link to="/" className="cursor-pointer">
-            <h1 className="text-7xl font-bold font-pacifico">
-              <span className="text-orange-500 font-pacifico mr-1 text-7xl">
-                i
-              </span>
-              Bank
-            </h1>
-          </Link>
-          <AiOutlineLoading3Quarters className="animate-spin text-7xl" />
-        </div>
-      ) : (
+      {
         <Routes>
           <Route path="/">
             <Route index element={<LazyIndexPage />} />
@@ -70,7 +46,7 @@ export default function App() {
             <Route path="contact" element={<LazyContactPage />} />
           </Route>
         </Routes>
-      )}
+      }
     </Suspense>
   );
 }
