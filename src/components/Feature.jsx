@@ -11,7 +11,7 @@ export default function Feature() {
         </h1>
       </div>
 
-      <div className="grid max-lg:grid-cols-1 grid-cols-3  gap-4 w-full lg:px-60">
+      <div className="grid max-lg:grid-cols-1 grid-cols-3 max-[1300px]:grid-cols-2  gap-4 w-full xl:px-60 ">
         <div className="bg-white p-4 rounded-md shadow-2xl flex flex-col gap-4 hover:scale-110 duration-300">
           <h1 className="flex gap-2 items-center text-2xl font-poppins">
             <BsShieldLock className="text-2xl text-orange-500" /> Protect your
