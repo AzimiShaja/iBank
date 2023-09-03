@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import preload from "/src/assets/preload.gif";
 
 function lazyWithTimeout(importFunction) {
   return lazy(() =>
@@ -22,7 +23,7 @@ export default function App() {
   return (
     <Suspense
       fallback={
-        <div className="h-screen bg-gray-100 flex justify-center items-center flex-col gap-5">
+        <div className="h-screen  flex justify-center items-center flex-col gap-5">
           <Link to="/" className="cursor-pointer">
             <h1 className="text-7xl font-bold font-pacifico">
               <span className="text-orange-500 font-pacifico mr-1 text-7xl">
@@ -31,7 +32,7 @@ export default function App() {
               Bank
             </h1>
           </Link>
-          <AiOutlineLoading3Quarters className="animate-spin text-7xl" />
+          <img src={preload} alt="" />
         </div>
       }
     >
